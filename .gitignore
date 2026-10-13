@@ -1,0 +1,15 @@
+# Kaggle data is ~2.5 GB and licensed by Kaggle; never commit it
+data/
+data_synthetic/
+*.zip
+
+# Generated artifacts (re-create with run_all.py)
+artifacts/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+.ipynb_checkpoints/
