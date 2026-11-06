@@ -1,0 +1,95 @@
+{
+  "n_rows": 307511,
+  "n_features": 551,
+  "default_rate": 0.08072881945686496,
+  "cv_oof_auc": 0.7899111029626154,
+  "cv_best_iterations": [
+    753,
+    826,
+    677,
+    734,
+    653
+  ],
+  "threshold": 0.16,
+  "test": {
+    "LightGBM (all rows, all tables)": {
+      "accuracy": 0.8629985529161179,
+      "balanced_accuracy": 0.6774581681234844,
+      "precision_0": 0.9495440275078487,
+      "precision_1": 0.2834438743586535,
+      "recall_0": 0.8987229827726485,
+      "recall_1": 0.4561933534743202,
+      "f1_0": 0.9234348023625625,
+      "f1_1": 0.349644952145724,
+      "threshold": 0.16,
+      "roc_auc": 0.7937791253550759,
+      "pr_auc": 0.2984059649250999
+    },
+    "Logistic Regression (same data)": {
+      "accuracy": 0.7125993853958343,
+      "balanced_accuracy": 0.7086442089212197,
+      "precision_0": 0.964834218458447,
+      "precision_1": 0.17740216232678543,
+      "recall_0": 0.7133609253953094,
+      "recall_1": 0.7039274924471299,
+      "f1_0": 0.8202562538133008,
+      "f1_1": 0.2833860374604719,
+      "threshold": 0.5,
+      "roc_auc": 0.7750890390289779,
+      "pr_auc": 0.2610215537775998
+    },
+    "Demo model (20 typed-in fields)": {
+      "accuracy": 0.8588524137033966,
+      "balanced_accuracy": 0.6539830816137455,
+      "precision_0": 0.9454382992981999,
+      "precision_1": 0.2613052415210689,
+      "recall_0": 0.8982984895114791,
+      "recall_1": 0.4096676737160121,
+      "f1_0": 0.9212657699737885,
+      "f1_1": 0.319083849713703,
+      "threshold": 0.16,
+      "roc_auc": 0.7673131852929117,
+      "pr_auc": 0.2557038667772378
+    }
+  },
+  "ablation_auc": {
+    "Full model": 0.7937791253550759,
+    "No EXT_SOURCE scores": 0.7715801156042348,
+    "Application table only": 0.7694692911578831,
+    "Application only, no EXT_SOURCE": 0.7222937405732731
+  },
+  "thin_file": {
+    "n": 8776,
+    "default_rate": 0.10141294439380127,
+    "auc_full_model": 0.7779394289980538,
+    "auc_no_ext_source": 0.7652051566280167,
+    "auc_with_history": 0.7953548249770878
+  },
+  "top_features": {
+    "EXT_SOURCE_MEAN": 0.15623,
+    "ORGANIZATION_TYPE": 0.04768,
+    "EXT_SOURCE_3": 0.04127,
+    "EXT_SOURCE_2": 0.04013,
+    "BURO_DEBT_CREDIT_RATIO_MAX": 0.0233,
+    "PAYMENT_RATE": 0.01891,
+    "EXT_SOURCE_1": 0.01663,
+    "GOODS_CREDIT_RATIO": 0.01617,
+    "DAYS_EMPLOYED": 0.01305,
+    "INSTAL_PAID_LATE_MEAN": 0.01226,
+    "OCCUPATION_TYPE": 0.01129,
+    "PREV_DAYS_LAST_DUE_1ST_VERSION_MAX": 0.01111,
+    "DAYS_BIRTH": 0.01031,
+    "EXT_SOURCE_STD": 0.01008,
+    "AMT_ANNUITY": 0.00993,
+    "BURO_DEBT_CREDIT_RATIO_MEAN": 0.00972,
+    "PREV_NAME_CONTRACT_STATUS_Refused_SHARE": 0.00759,
+    "CC_CNT_DRAWINGS_ATM_CURRENT_MEAN": 0.00697,
+    "ANNUITY_INCOME_RATIO": 0.00672,
+    "CODE_GENDER": 0.00633,
+    "EMPLOYED_AGE_RATIO": 0.00625,
+    "BURO_DAYS_CREDIT_ENDDATE_MAX": 0.00624,
+    "OWN_CAR_AGE": 0.00622,
+    "NAME_EDUCATION_TYPE": 0.00621,
+    "POS_COUNT": 0.00615
+  }
+}
